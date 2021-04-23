@@ -1,8 +1,7 @@
 package sample.algorithms;
 
 import org.junit.Test;
-
-import java.util.Arrays;
+import sample.other.ResponseCode;
 
 import static com.google.common.truth.Truth.assertThat;
 

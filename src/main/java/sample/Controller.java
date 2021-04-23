@@ -1,6 +1,5 @@
 package sample;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
@@ -9,11 +8,16 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.paint.Paint;
 import sample.algorithms.HammingAlgorithm;
-import sample.algorithms.ResponseCode;
+import sample.other.Constants;
+import sample.other.ResponseCode;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.*;
+
+import static sample.other.Constants.*;
 
 public class Controller {
     @FXML public Label labelMessage;
@@ -90,12 +94,19 @@ public class Controller {
     @FXML public Button button70;
     @FXML public Button button71;
     @FXML public TextField textFieldFileName;
+    @FXML public Button buttonFetchNextWord;
 
     private final Paint RED_COLOR = Paint.valueOf("#FF0000");
     private final Paint GREEN_COLOR = Paint.valueOf("#008000");
-    private final List<Button> buttons = new ArrayList<>(72);
+    private final Paint BLACK_COLOR = Paint.valueOf("#000000");
+
+    private FileWriter reportFile;
+
     private int[] currentWord = new int[72];
     private int currentBadIndex = ResponseCode.NO_ERRORS.code;
+    private final List<String> messages = new ArrayList<>();
+    private int messageIterator = -1;
+    private final List<Button> buttons = new ArrayList<>(72);
 
     @FXML
     public void initialize() {
@@ -111,21 +122,96 @@ public class Controller {
         buttons.add(button54); buttons.add(button55); buttons.add(button56); buttons.add(button57); buttons.add(button58); buttons.add(button59);
         buttons.add(button60); buttons.add(button61); buttons.add(button62); buttons.add(button63); buttons.add(button64); buttons.add(button65);
         buttons.add(button66); buttons.add(button67); buttons.add(button68); buttons.add(button69); buttons.add(button70); buttons.add(button71);
+
+        try {
+            reportFile = new FileWriter("report.txt");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 
     @FXML
     public void loadFromFile() {
+        String path = textFieldFileName.getText();
 
+        if (path == null || path.isEmpty()) {
+            showAlert(ALERT_PROVIDE_FILENAME, AlertType.WARNING);
+
+            return;
+        }
+
+        File file = new File(path);
+
+        try (Scanner scanner = new Scanner(file)) {
+            messages.clear();
+            messageIterator = -1;
+
+            while (scanner.hasNextLine()) {
+                messages.add(scanner.nextLine());
+            }
+        } catch (FileNotFoundException e) {
+            showAlert(ERROR_FILE_DOES_NOT_EXIST, AlertType.ERROR);
+
+            return;
+        }
+
+        buttonFetchNextWord.setDisable(false);
+        fetchNextWord();
+    }
+
+    private void showAlert(String message, AlertType type) {
+        Alert alert = new Alert(type);
+        alert.setTitle("Info");
+        alert.setHeaderText(null);
+        alert.setContentText(message);
+        alert.showAndWait();
+
+        writeToReport(message);
+    }
+
+    @FXML
+    public void fetchNextWord() {
+        messageIterator++;
+
+        if (messageIterator < messages.size()) {
+            String message = messages.get(messageIterator);
+
+            transformAndShowMessage(message);
+        } else {
+            buttonFetchNextWord.setDisable(true);
+        }
+    }
+
+    private void transformAndShowMessage(String message) {
+        currentWord = HammingAlgorithm.calculate(message);
+        writeToReport(message);
+
+        showTransformedWord();
+    }
+
+    private void writeToReport(String message) {
+        try {
+            reportFile.write(message);
+            reportFile.write("\n");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void showTransformedWord() {
+        for (int i = 0; i < currentWord.length; i++) {
+            String singleValue = String.valueOf(currentWord[i]);
+            buttons.get(i).setText(singleValue);
+        }
+        writeToReport(Arrays.toString(currentWord));
     }
 
     @FXML
     public void generateRandomWord() {
         String random64bitWord = generate64bitWord();
 
-        currentWord = HammingAlgorithm.calculate(random64bitWord);
-
-        showTransformedWord();
+        transformAndShowMessage(random64bitWord);
     }
 
     private String generate64bitWord() {
@@ -138,13 +224,6 @@ public class Controller {
         }
 
         return sb.toString();
-    }
-
-    private void showTransformedWord() {
-        for (int i = 0; i < currentWord.length; i++) {
-            String singleValue = String.valueOf(currentWord[i]);
-            buttons.get(i).setText(singleValue);
-        }
     }
 
     @FXML
@@ -165,44 +244,40 @@ public class Controller {
         searchButton.setText(String.valueOf(currentWord[index]));
 
         searchButton.setTextFill(textColor);
+
+        writeToReport(Arrays.toString(currentWord));
     }
 
     @FXML
     public void checkCorrectness() {
         currentBadIndex = HammingAlgorithm.calculateErrorIndex(currentWord);
 
-        if (currentBadIndex == ResponseCode.NO_ERRORS.code)
-            labelMessage.setText("No errors have been detected");
-        else if(currentBadIndex == ResponseCode.TWO_ERRORS.code)
-            labelMessage.setText("Two errors have been detected");
-        else
-            labelMessage.setText("Bad Index = " + currentBadIndex);
+        if (currentBadIndex == ResponseCode.NO_ERRORS.code) {
+            labelMessage.setText(MESSAGE_NO_ERRORS);
+            writeToReport(MESSAGE_NO_ERRORS);
+
+        }
+        else if(currentBadIndex == ResponseCode.TWO_ERRORS.code) {
+            labelMessage.setText(MESSAGE_TWO_ERRORS);
+            writeToReport(MESSAGE_TWO_ERRORS);
+        }
+        else {
+            String badIndex = String.format(MESSAGE_BAD_INDEX, currentBadIndex);
+            labelMessage.setText(badIndex);
+            writeToReport(badIndex);
+        }
     }
 
     @FXML
     public void correctBit() {
-        // more than two errors have been detected
         if (currentBadIndex >= buttons.size()) {
-            Alert alert = new Alert(AlertType.INFORMATION);
-            alert.setTitle("Info");
-            alert.setHeaderText(null);
-            alert.setContentText("More than two errors have been detected. Program cannot correct more than one error.");
-            alert.showAndWait();
+            showAlert(ALERT_MORE_THAN_TWO_ERRORS, AlertType.INFORMATION);
         } else if (currentBadIndex == ResponseCode.TWO_ERRORS.code) {
-            Alert alert = new Alert(AlertType.INFORMATION);
-            alert.setTitle("Info");
-            alert.setHeaderText(null);
-            alert.setContentText("Two errors have been detected. Program cannot correct two errors.");
-            alert.showAndWait();
+            showAlert(ALERT_TWO_ERRORS, AlertType.INFORMATION);
         } else if(currentBadIndex == ResponseCode.NO_ERRORS.code) {
-            Alert alert = new Alert(AlertType.INFORMATION);
-            alert.setTitle("Info");
-            alert.setHeaderText(null);
-            alert.setContentText("No errors have been detected. Please change one bit to wrong value.");
-            alert.showAndWait();
+            showAlert(ALERT_NO_ERRORS, AlertType.INFORMATION);
         } else {
             changeBitToOppositeValue(currentBadIndex, GREEN_COLOR);
-            //clearLabelMessage();
         }
     }
 
@@ -210,17 +285,29 @@ public class Controller {
     public void cleanUpGridView() {
         for (Button button : buttons) {
             button.setText("0");
-            button.setTextFill(Paint.valueOf("#000000"));
+            button.setTextFill(BLACK_COLOR);
         }
 
         clearLabelMessage();
+        clearCurrentWord();
     }
 
     private void clearLabelMessage() {
         labelMessage.setText("");
     }
 
-    public void fetchNextWord() {
+    private void clearCurrentWord() {
+        currentWord = new int[72];
+        currentBadIndex = ResponseCode.NO_ERRORS.code;
 
+        writeToReport(Arrays.toString(currentWord));
+    }
+
+    public void shutdown() {
+        try {
+            reportFile.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

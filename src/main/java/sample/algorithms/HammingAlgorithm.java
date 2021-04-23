@@ -1,6 +1,6 @@
 package sample.algorithms;
 
-import java.util.Arrays;
+import sample.other.ResponseCode;
 
 public class HammingAlgorithm {
 

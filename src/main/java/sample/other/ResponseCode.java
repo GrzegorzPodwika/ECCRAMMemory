@@ -1,4 +1,4 @@
-package sample.algorithms;
+package sample.other;
 
 public enum ResponseCode {
     NO_ERRORS(-1),
