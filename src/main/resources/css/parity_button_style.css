@@ -1,0 +1,8 @@
+.button {
+    -fx-border-color: #FF7F50;
+    -fx-border-width: 3px;
+}
+
+.button:disabled {
+    -fx-opacity: 1;
+}

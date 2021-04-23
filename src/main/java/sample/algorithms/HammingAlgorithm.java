@@ -76,12 +76,17 @@ public class HammingAlgorithm {
             }
         }
 
-        // two errors has been detected
+        // two errors have been detected
         if (parityBit == 0 && index != 0) {
-            return -1;
+            return ResponseCode.TWO_ERRORS.code;
+        } else if(parityBit == 0 && index == 0) {
+            // no errors have been detected
+            return ResponseCode.NO_ERRORS.code;
+        } else {
+            // one error has been detected
+            // more than two errors have been detected
+            return index;
         }
-
-        return index;
     }
 
 }

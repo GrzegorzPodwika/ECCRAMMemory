@@ -88,10 +88,10 @@ public class HammingAlgorithmTest {
     }
 
     @Test
-    public void testDoubleErrorDetecting() {
-        // Given a msg with error on 10th position
-        final int[] msgWithError = {0,0,1,0, 1,0,1,1, 1,0,1,1, 1,1,1,0};
-        final int expectedErrorIndex = -1;
+    public void testSingleErrorDetectingOn0thPosition() {
+        // Given a msg with error on 0th position
+        final int[] msgWithError = {1,0,1,0, 1,0,1,1, 1,0,0,0, 1,1,1,0};
+        final int expectedErrorIndex = 0;
 
         // When executing error detection
         final int errorIndex = HammingAlgorithm.calculateErrorIndex(msgWithError);
@@ -99,4 +99,31 @@ public class HammingAlgorithmTest {
         // Then check if errorIndex is as expected
         assertThat(errorIndex).isEqualTo(expectedErrorIndex);
     }
+
+    @Test
+    public void testErrorDetectingOnCorrectMessage() {
+        // Given a correct message
+        final int[] msgWithError = {0,0,1,0, 1,0,1,1, 1,0,0,0, 1,1,1,0};
+        final int expectedErrorIndex = ResponseCode.NO_ERRORS.code;
+
+        // When executing error detection
+        final int errorIndex = HammingAlgorithm.calculateErrorIndex(msgWithError);
+
+        // Then check if errorIndex is as expected
+        assertThat(errorIndex).isEqualTo(expectedErrorIndex);
+    }
+
+    @Test
+    public void testDoubleErrorDetecting() {
+        // Given a msg with two errors
+        final int[] msgWithError = {0,0,1,0, 1,0,1,1, 1,0,1,1, 1,1,1,0};
+        final int expectedErrorIndex = ResponseCode.TWO_ERRORS.code;
+
+        // When executing error detection
+        final int errorIndex = HammingAlgorithm.calculateErrorIndex(msgWithError);
+
+        // Then check if errorIndex is as expected
+        assertThat(errorIndex).isEqualTo(expectedErrorIndex);
+    }
+
 }
