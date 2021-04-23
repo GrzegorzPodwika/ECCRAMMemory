@@ -6,6 +6,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.paint.Paint;
 import sample.algorithms.HammingAlgorithm;
 import sample.algorithms.ResponseCode;
@@ -88,6 +89,7 @@ public class Controller {
     @FXML public Button button69;
     @FXML public Button button70;
     @FXML public Button button71;
+    @FXML public TextField textFieldFileName;
 
     private final Paint RED_COLOR = Paint.valueOf("#FF0000");
     private final Paint GREEN_COLOR = Paint.valueOf("#008000");
@@ -216,5 +218,9 @@ public class Controller {
 
     private void clearLabelMessage() {
         labelMessage.setText("");
+    }
+
+    public void fetchNextWord() {
+
     }
 }

@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.gluonhq.charm.glisten.control.Icon?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
@@ -11,53 +13,55 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: #ccccdd;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #ccccdd;"
+            xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="sample.Controller">
     <children>
         <HBox layoutX="494.0" layoutY="66.0" AnchorPane.bottomAnchor="30.0" AnchorPane.rightAnchor="50.0">
             <children>
                 <VBox prefHeight="200.0" prefWidth="50.0">
                     <HBox.margin>
-                        <Insets top="100.0" />
+                        <Insets top="100.0"/>
                     </HBox.margin>
                     <children>
                         <Label alignment="CENTER" prefHeight="50.0" prefWidth="50.0" text="8">
                             <font>
-                                <Font name="System Bold" size="18.0" />
+                                <Font name="System Bold" size="18.0"/>
                             </font>
                         </Label>
                         <Label alignment="CENTER" prefHeight="50.0" prefWidth="50.0" text="16">
                             <font>
-                                <Font name="System Bold" size="18.0" />
+                                <Font name="System Bold" size="18.0"/>
                             </font>
                         </Label>
                         <Label alignment="CENTER" prefHeight="50.0" prefWidth="50.0" text="24">
                             <font>
-                                <Font name="System Bold" size="18.0" />
+                                <Font name="System Bold" size="18.0"/>
                             </font>
                         </Label>
                         <Label alignment="CENTER" prefHeight="50.0" prefWidth="50.0" text="32">
                             <font>
-                                <Font name="System Bold" size="18.0" />
+                                <Font name="System Bold" size="18.0"/>
                             </font>
                         </Label>
                         <Label alignment="CENTER" prefHeight="50.0" prefWidth="50.0" text="40">
                             <font>
-                                <Font name="System Bold" size="18.0" />
+                                <Font name="System Bold" size="18.0"/>
                             </font>
                         </Label>
                         <Label alignment="CENTER" prefHeight="50.0" prefWidth="50.0" text="48">
                             <font>
-                                <Font name="System Bold" size="18.0" />
+                                <Font name="System Bold" size="18.0"/>
                             </font>
                         </Label>
                         <Label alignment="CENTER" prefHeight="50.0" prefWidth="50.0" text="56">
                             <font>
-                                <Font name="System Bold" size="18.0" />
+                                <Font name="System Bold" size="18.0"/>
                             </font>
                         </Label>
                         <Label alignment="CENTER" prefHeight="50.0" prefWidth="50.0" text="64">
                             <font>
-                                <Font name="System Bold" size="18.0" />
+                                <Font name="System Bold" size="18.0"/>
                             </font>
                         </Label>
                     </children>
@@ -68,435 +72,578 @@
                             <children>
                                 <Label alignment="CENTER" prefHeight="50.0" prefWidth="50.0" text="0">
                                     <font>
-                                        <Font name="System Bold" size="18.0" />
+                                        <Font name="System Bold" size="18.0"/>
                                     </font>
                                 </Label>
                                 <Label alignment="CENTER" prefHeight="50.0" prefWidth="50.0" text="1">
                                     <font>
-                                        <Font name="System Bold" size="18.0" />
+                                        <Font name="System Bold" size="18.0"/>
                                     </font>
                                 </Label>
                                 <Label alignment="CENTER" prefHeight="50.0" prefWidth="50.0" text="2">
                                     <font>
-                                        <Font name="System Bold" size="18.0" />
+                                        <Font name="System Bold" size="18.0"/>
                                     </font>
                                 </Label>
                                 <Label alignment="CENTER" prefHeight="50.0" prefWidth="50.0" text="3">
                                     <font>
-                                        <Font name="System Bold" size="18.0" />
+                                        <Font name="System Bold" size="18.0"/>
                                     </font>
                                 </Label>
                                 <Label alignment="CENTER" prefHeight="50.0" prefWidth="50.0" text="4">
                                     <font>
-                                        <Font name="System Bold" size="18.0" />
+                                        <Font name="System Bold" size="18.0"/>
                                     </font>
                                 </Label>
                                 <Label alignment="CENTER" prefHeight="50.0" prefWidth="50.0" text="5">
                                     <font>
-                                        <Font name="System Bold" size="18.0" />
+                                        <Font name="System Bold" size="18.0"/>
                                     </font>
                                 </Label>
                                 <Label alignment="CENTER" prefHeight="50.0" prefWidth="50.0" text="6">
                                     <font>
-                                        <Font name="System Bold" size="18.0" />
+                                        <Font name="System Bold" size="18.0"/>
                                     </font>
                                 </Label>
                                 <Label alignment="CENTER" prefHeight="50.0" prefWidth="50.0" text="7">
                                     <font>
-                                        <Font name="System Bold" size="18.0" />
+                                        <Font name="System Bold" size="18.0"/>
                                     </font>
                                 </Label>
                             </children>
                         </HBox>
                         <GridPane>
                             <columnConstraints>
-                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="50.0" />
-                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="50.0" />
-                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="50.0" />
-                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="50.0" />
-                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="50.0" />
-                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="50.0" />
-                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="50.0" />
-                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="50.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="50.0"/>
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="50.0"/>
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="50.0"/>
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="50.0"/>
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="50.0"/>
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="50.0"/>
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="50.0"/>
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="50.0"/>
                             </columnConstraints>
                             <rowConstraints>
-                                <RowConstraints minHeight="50.0" vgrow="SOMETIMES" />
-                                <RowConstraints minHeight="50.0" vgrow="SOMETIMES" />
-                                <RowConstraints minHeight="50.0" vgrow="SOMETIMES" />
-                                <RowConstraints minHeight="50.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                <RowConstraints minHeight="50.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                <RowConstraints minHeight="50.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                <RowConstraints minHeight="50.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                <RowConstraints minHeight="50.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                <RowConstraints minHeight="50.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="50.0" vgrow="SOMETIMES"/>
+                                <RowConstraints minHeight="50.0" vgrow="SOMETIMES"/>
+                                <RowConstraints minHeight="50.0" vgrow="SOMETIMES"/>
+                                <RowConstraints minHeight="50.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                                <RowConstraints minHeight="50.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                                <RowConstraints minHeight="50.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                                <RowConstraints minHeight="50.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                                <RowConstraints minHeight="50.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                                <RowConstraints minHeight="50.0" prefHeight="30.0" vgrow="SOMETIMES"/>
                             </rowConstraints>
                             <children>
-                                <Button fx:id="button0" disable="true" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" stylesheets="@../css/parity_button_style.css" text="0">
+                                <Button fx:id="button0" disable="true" mnemonicParsing="false" prefHeight="50.0"
+                                        prefWidth="50.0" stylesheets="@../css/parity_button_style.css" text="0">
                                     <font>
-                                        <Font size="18.0" />
+                                        <Font size="18.0"/>
                                     </font>
                                 </Button>
-                                <Button fx:id="button1" disable="true" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" stylesheets="@../css/parity_button_style.css" text="0" GridPane.columnIndex="1">
+                                <Button fx:id="button1" disable="true" mnemonicParsing="false" prefHeight="50.0"
+                                        prefWidth="50.0" stylesheets="@../css/parity_button_style.css" text="0"
+                                        GridPane.columnIndex="1">
                                     <font>
-                                        <Font size="18.0" />
+                                        <Font size="18.0"/>
                                     </font>
                                 </Button>
-                                <Button fx:id="button2" disable="true" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" stylesheets="@../css/parity_button_style.css" text="0" GridPane.columnIndex="2">
+                                <Button fx:id="button2" disable="true" mnemonicParsing="false" prefHeight="50.0"
+                                        prefWidth="50.0" stylesheets="@../css/parity_button_style.css" text="0"
+                                        GridPane.columnIndex="2">
                                     <font>
-                                        <Font size="18.0" />
+                                        <Font size="18.0"/>
                                     </font>
                                 </Button>
-                                <Button fx:id="button3" disable="true" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0" GridPane.columnIndex="3">
+                                <Button fx:id="button3" disable="true" mnemonicParsing="false" prefHeight="50.0"
+                                        prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0"
+                                        GridPane.columnIndex="3">
                                     <font>
-                                        <Font size="18.0" />
+                                        <Font size="18.0"/>
                                     </font>
                                 </Button>
-                                <Button fx:id="button4" disable="true" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" stylesheets="@../css/parity_button_style.css" text="0" GridPane.columnIndex="4">
+                                <Button fx:id="button4" disable="true" mnemonicParsing="false" prefHeight="50.0"
+                                        prefWidth="50.0" stylesheets="@../css/parity_button_style.css" text="0"
+                                        GridPane.columnIndex="4">
                                     <font>
-                                        <Font size="18.0" />
+                                        <Font size="18.0"/>
                                     </font>
                                 </Button>
-                                <Button fx:id="button5" disable="true" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0" GridPane.columnIndex="5">
+                                <Button fx:id="button5" disable="true" mnemonicParsing="false" prefHeight="50.0"
+                                        prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0"
+                                        GridPane.columnIndex="5">
                                     <font>
-                                        <Font size="18.0" />
+                                        <Font size="18.0"/>
                                     </font>
                                 </Button>
-                                <Button fx:id="button6" disable="true" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0" GridPane.columnIndex="6">
+                                <Button fx:id="button6" disable="true" mnemonicParsing="false" prefHeight="50.0"
+                                        prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0"
+                                        GridPane.columnIndex="6">
                                     <font>
-                                        <Font size="18.0" />
+                                        <Font size="18.0"/>
                                     </font>
                                 </Button>
-                                <Button fx:id="button7" disable="true" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0" GridPane.columnIndex="7">
+                                <Button fx:id="button7" disable="true" mnemonicParsing="false" prefHeight="50.0"
+                                        prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0"
+                                        GridPane.columnIndex="7">
                                     <font>
-                                        <Font size="18.0" />
-                                    </font>
-                                </Button>
-
-                                <Button fx:id="button8" disable="true" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" stylesheets="@../css/parity_button_style.css" text="0" GridPane.rowIndex="1">
-                                    <font>
-                                        <Font size="18.0" />
-                                    </font>
-                                </Button>
-                                <Button fx:id="button9" disable="true" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0" GridPane.columnIndex="1" GridPane.rowIndex="1">
-                                    <font>
-                                        <Font size="18.0" />
-                                    </font>
-                                </Button>
-                                <Button fx:id="button10" disable="true" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0" GridPane.columnIndex="2" GridPane.rowIndex="1">
-                                    <font>
-                                        <Font size="18.0" />
-                                    </font>
-                                </Button>
-                                <Button fx:id="button11" disable="true" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0" GridPane.columnIndex="3" GridPane.rowIndex="1">
-                                    <font>
-                                        <Font size="18.0" />
-                                    </font>
-                                </Button>
-                                <Button fx:id="button12" disable="true" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0" GridPane.columnIndex="4" GridPane.rowIndex="1">
-                                    <font>
-                                        <Font size="18.0" />
-                                    </font>
-                                </Button>
-                                <Button fx:id="button13" disable="true" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0" GridPane.columnIndex="5" GridPane.rowIndex="1">
-                                    <font>
-                                        <Font size="18.0" />
-                                    </font>
-                                </Button>
-                                <Button fx:id="button14" disable="true" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0" GridPane.columnIndex="6" GridPane.rowIndex="1">
-                                    <font>
-                                        <Font size="18.0" />
-                                    </font>
-                                </Button>
-                                <Button fx:id="button15" disable="true" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0" GridPane.columnIndex="7" GridPane.rowIndex="1">
-                                    <font>
-                                        <Font size="18.0" />
+                                        <Font size="18.0"/>
                                     </font>
                                 </Button>
 
-                                <Button fx:id="button16" disable="true" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" stylesheets="@../css/parity_button_style.css" text="0" GridPane.rowIndex="2">
+                                <Button fx:id="button8" disable="true" mnemonicParsing="false" prefHeight="50.0"
+                                        prefWidth="50.0" stylesheets="@../css/parity_button_style.css" text="0"
+                                        GridPane.rowIndex="1">
                                     <font>
-                                        <Font size="18.0" />
+                                        <Font size="18.0"/>
                                     </font>
                                 </Button>
-                                <Button fx:id="button17" disable="true" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                <Button fx:id="button9" disable="true" mnemonicParsing="false" prefHeight="50.0"
+                                        prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0"
+                                        GridPane.columnIndex="1" GridPane.rowIndex="1">
                                     <font>
-                                        <Font size="18.0" />
+                                        <Font size="18.0"/>
                                     </font>
                                 </Button>
-                                <Button fx:id="button18" disable="true" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                <Button fx:id="button10" disable="true" mnemonicParsing="false" prefHeight="50.0"
+                                        prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0"
+                                        GridPane.columnIndex="2" GridPane.rowIndex="1">
                                     <font>
-                                        <Font size="18.0" />
+                                        <Font size="18.0"/>
                                     </font>
                                 </Button>
-                                <Button fx:id="button19" disable="true" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                                <Button fx:id="button11" disable="true" mnemonicParsing="false" prefHeight="50.0"
+                                        prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0"
+                                        GridPane.columnIndex="3" GridPane.rowIndex="1">
                                     <font>
-                                        <Font size="18.0" />
+                                        <Font size="18.0"/>
                                     </font>
                                 </Button>
-                                <Button fx:id="button20" disable="true" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                                <Button fx:id="button12" disable="true" mnemonicParsing="false" prefHeight="50.0"
+                                        prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0"
+                                        GridPane.columnIndex="4" GridPane.rowIndex="1">
                                     <font>
-                                        <Font size="18.0" />
+                                        <Font size="18.0"/>
                                     </font>
                                 </Button>
-                                <Button fx:id="button21" disable="true" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0" GridPane.columnIndex="5" GridPane.rowIndex="2">
+                                <Button fx:id="button13" disable="true" mnemonicParsing="false" prefHeight="50.0"
+                                        prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0"
+                                        GridPane.columnIndex="5" GridPane.rowIndex="1">
                                     <font>
-                                        <Font size="18.0" />
+                                        <Font size="18.0"/>
                                     </font>
                                 </Button>
-                                <Button fx:id="button22" disable="true" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0" GridPane.columnIndex="6" GridPane.rowIndex="2">
+                                <Button fx:id="button14" disable="true" mnemonicParsing="false" prefHeight="50.0"
+                                        prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0"
+                                        GridPane.columnIndex="6" GridPane.rowIndex="1">
                                     <font>
-                                        <Font size="18.0" />
+                                        <Font size="18.0"/>
                                     </font>
                                 </Button>
-                                <Button fx:id="button23" disable="true" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0" GridPane.columnIndex="7" GridPane.rowIndex="2">
+                                <Button fx:id="button15" disable="true" mnemonicParsing="false" prefHeight="50.0"
+                                        prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0"
+                                        GridPane.columnIndex="7" GridPane.rowIndex="1">
                                     <font>
-                                        <Font size="18.0" />
-                                    </font>
-                                </Button>
-
-                                <Button fx:id="button24" disable="true" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0" GridPane.rowIndex="3">
-                                    <font>
-                                        <Font size="18.0" />
-                                    </font>
-                                </Button>
-                                <Button fx:id="button25" disable="true" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0" GridPane.columnIndex="1" GridPane.rowIndex="3">
-                                    <font>
-                                        <Font size="18.0" />
-                                    </font>
-                                </Button>
-                                <Button fx:id="button26" disable="true" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0" GridPane.columnIndex="2" GridPane.rowIndex="3">
-                                    <font>
-                                        <Font size="18.0" />
-                                    </font>
-                                </Button>
-                                <Button fx:id="button27" disable="true" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0" GridPane.columnIndex="3" GridPane.rowIndex="3">
-                                    <font>
-                                        <Font size="18.0" />
-                                    </font>
-                                </Button>
-                                <Button fx:id="button28" disable="true" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0" GridPane.columnIndex="4" GridPane.rowIndex="3">
-                                    <font>
-                                        <Font size="18.0" />
-                                    </font>
-                                </Button>
-                                <Button fx:id="button29" disable="true" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0" GridPane.columnIndex="5" GridPane.rowIndex="3">
-                                    <font>
-                                        <Font size="18.0" />
-                                    </font>
-                                </Button>
-                                <Button fx:id="button30" disable="true" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0" GridPane.columnIndex="6" GridPane.rowIndex="3">
-                                    <font>
-                                        <Font size="18.0" />
-                                    </font>
-                                </Button>
-                                <Button fx:id="button31" disable="true" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0" GridPane.columnIndex="7" GridPane.rowIndex="3">
-                                    <font>
-                                        <Font size="18.0" />
+                                        <Font size="18.0"/>
                                     </font>
                                 </Button>
 
-                                <Button fx:id="button32" disable="true" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" stylesheets="@../css/parity_button_style.css" text="0" GridPane.rowIndex="4">
+                                <Button fx:id="button16" disable="true" mnemonicParsing="false" prefHeight="50.0"
+                                        prefWidth="50.0" stylesheets="@../css/parity_button_style.css" text="0"
+                                        GridPane.rowIndex="2">
                                     <font>
-                                        <Font size="18.0" />
+                                        <Font size="18.0"/>
                                     </font>
                                 </Button>
-                                <Button fx:id="button33" disable="true" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                <Button fx:id="button17" disable="true" mnemonicParsing="false" prefHeight="50.0"
+                                        prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0"
+                                        GridPane.columnIndex="1" GridPane.rowIndex="2">
                                     <font>
-                                        <Font size="18.0" />
+                                        <Font size="18.0"/>
                                     </font>
                                 </Button>
-                                <Button fx:id="button34" disable="true" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                                <Button fx:id="button18" disable="true" mnemonicParsing="false" prefHeight="50.0"
+                                        prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0"
+                                        GridPane.columnIndex="2" GridPane.rowIndex="2">
                                     <font>
-                                        <Font size="18.0" />
+                                        <Font size="18.0"/>
                                     </font>
                                 </Button>
-                                <Button fx:id="button35" disable="true" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                                <Button fx:id="button19" disable="true" mnemonicParsing="false" prefHeight="50.0"
+                                        prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0"
+                                        GridPane.columnIndex="3" GridPane.rowIndex="2">
                                     <font>
-                                        <Font size="18.0" />
+                                        <Font size="18.0"/>
                                     </font>
                                 </Button>
-                                <Button fx:id="button36" disable="true" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0" GridPane.columnIndex="4" GridPane.rowIndex="4">
+                                <Button fx:id="button20" disable="true" mnemonicParsing="false" prefHeight="50.0"
+                                        prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0"
+                                        GridPane.columnIndex="4" GridPane.rowIndex="2">
                                     <font>
-                                        <Font size="18.0" />
+                                        <Font size="18.0"/>
                                     </font>
                                 </Button>
-                                <Button fx:id="button37" disable="true" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0" GridPane.columnIndex="5" GridPane.rowIndex="4">
+                                <Button fx:id="button21" disable="true" mnemonicParsing="false" prefHeight="50.0"
+                                        prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0"
+                                        GridPane.columnIndex="5" GridPane.rowIndex="2">
                                     <font>
-                                        <Font size="18.0" />
+                                        <Font size="18.0"/>
                                     </font>
                                 </Button>
-                                <Button fx:id="button38" disable="true" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0" GridPane.columnIndex="6" GridPane.rowIndex="4">
+                                <Button fx:id="button22" disable="true" mnemonicParsing="false" prefHeight="50.0"
+                                        prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0"
+                                        GridPane.columnIndex="6" GridPane.rowIndex="2">
                                     <font>
-                                        <Font size="18.0" />
+                                        <Font size="18.0"/>
                                     </font>
                                 </Button>
-                                <Button fx:id="button39" disable="true" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0" GridPane.columnIndex="7" GridPane.rowIndex="4">
+                                <Button fx:id="button23" disable="true" mnemonicParsing="false" prefHeight="50.0"
+                                        prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0"
+                                        GridPane.columnIndex="7" GridPane.rowIndex="2">
                                     <font>
-                                        <Font size="18.0" />
-                                    </font>
-                                </Button>
-
-                                <Button fx:id="button40" disable="true" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0" GridPane.rowIndex="5">
-                                    <font>
-                                        <Font size="18.0" />
-                                    </font>
-                                </Button>
-                                <Button fx:id="button41" disable="true" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0" GridPane.columnIndex="1" GridPane.rowIndex="5">
-                                    <font>
-                                        <Font size="18.0" />
-                                    </font>
-                                </Button>
-                                <Button fx:id="button42" disable="true" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0" GridPane.columnIndex="2" GridPane.rowIndex="5">
-                                    <font>
-                                        <Font size="18.0" />
-                                    </font>
-                                </Button>
-                                <Button fx:id="button43" disable="true" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0" GridPane.columnIndex="3" GridPane.rowIndex="5">
-                                    <font>
-                                        <Font size="18.0" />
-                                    </font>
-                                </Button>
-                                <Button fx:id="button44" disable="true" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0" GridPane.columnIndex="4" GridPane.rowIndex="5">
-                                    <font>
-                                        <Font size="18.0" />
-                                    </font>
-                                </Button>
-                                <Button fx:id="button45" disable="true" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0" GridPane.columnIndex="5" GridPane.rowIndex="5">
-                                    <font>
-                                        <Font size="18.0" />
-                                    </font>
-                                </Button>
-                                <Button fx:id="button46" disable="true" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0" GridPane.columnIndex="6" GridPane.rowIndex="5">
-                                    <font>
-                                        <Font size="18.0" />
-                                    </font>
-                                </Button>
-                                <Button fx:id="button47" disable="true" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0" GridPane.columnIndex="7" GridPane.rowIndex="5">
-                                    <font>
-                                        <Font size="18.0" />
+                                        <Font size="18.0"/>
                                     </font>
                                 </Button>
 
-                                <Button fx:id="button48" disable="true" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0" GridPane.rowIndex="6">
+                                <Button fx:id="button24" disable="true" mnemonicParsing="false" prefHeight="50.0"
+                                        prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0"
+                                        GridPane.rowIndex="3">
                                     <font>
-                                        <Font size="18.0" />
+                                        <Font size="18.0"/>
                                     </font>
                                 </Button>
-                                <Button fx:id="button49" disable="true" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                                <Button fx:id="button25" disable="true" mnemonicParsing="false" prefHeight="50.0"
+                                        prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0"
+                                        GridPane.columnIndex="1" GridPane.rowIndex="3">
                                     <font>
-                                        <Font size="18.0" />
+                                        <Font size="18.0"/>
                                     </font>
                                 </Button>
-                                <Button fx:id="button50" disable="true" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0" GridPane.columnIndex="2" GridPane.rowIndex="6">
+                                <Button fx:id="button26" disable="true" mnemonicParsing="false" prefHeight="50.0"
+                                        prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0"
+                                        GridPane.columnIndex="2" GridPane.rowIndex="3">
                                     <font>
-                                        <Font size="18.0" />
+                                        <Font size="18.0"/>
                                     </font>
                                 </Button>
-                                <Button fx:id="button51" disable="true" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0" GridPane.columnIndex="3" GridPane.rowIndex="6">
+                                <Button fx:id="button27" disable="true" mnemonicParsing="false" prefHeight="50.0"
+                                        prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0"
+                                        GridPane.columnIndex="3" GridPane.rowIndex="3">
                                     <font>
-                                        <Font size="18.0" />
+                                        <Font size="18.0"/>
                                     </font>
                                 </Button>
-                                <Button fx:id="button52" disable="true" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0" GridPane.columnIndex="4" GridPane.rowIndex="6">
+                                <Button fx:id="button28" disable="true" mnemonicParsing="false" prefHeight="50.0"
+                                        prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0"
+                                        GridPane.columnIndex="4" GridPane.rowIndex="3">
                                     <font>
-                                        <Font size="18.0" />
+                                        <Font size="18.0"/>
                                     </font>
                                 </Button>
-                                <Button fx:id="button53" disable="true" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0" GridPane.columnIndex="5" GridPane.rowIndex="6">
+                                <Button fx:id="button29" disable="true" mnemonicParsing="false" prefHeight="50.0"
+                                        prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0"
+                                        GridPane.columnIndex="5" GridPane.rowIndex="3">
                                     <font>
-                                        <Font size="18.0" />
+                                        <Font size="18.0"/>
                                     </font>
                                 </Button>
-                                <Button fx:id="button54" disable="true" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0" GridPane.columnIndex="6" GridPane.rowIndex="6">
+                                <Button fx:id="button30" disable="true" mnemonicParsing="false" prefHeight="50.0"
+                                        prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0"
+                                        GridPane.columnIndex="6" GridPane.rowIndex="3">
                                     <font>
-                                        <Font size="18.0" />
+                                        <Font size="18.0"/>
                                     </font>
                                 </Button>
-                                <Button fx:id="button55" disable="true" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0" GridPane.columnIndex="7" GridPane.rowIndex="6">
+                                <Button fx:id="button31" disable="true" mnemonicParsing="false" prefHeight="50.0"
+                                        prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0"
+                                        GridPane.columnIndex="7" GridPane.rowIndex="3">
                                     <font>
-                                        <Font size="18.0" />
-                                    </font>
-                                </Button>
-
-                                <Button fx:id="button56" disable="true" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0" GridPane.rowIndex="7">
-                                    <font>
-                                        <Font size="18.0" />
-                                    </font>
-                                </Button>
-                                <Button fx:id="button57" disable="true" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0" GridPane.columnIndex="1" GridPane.rowIndex="7">
-                                    <font>
-                                        <Font size="18.0" />
-                                    </font>
-                                </Button>
-                                <Button fx:id="button58" disable="true" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0" GridPane.columnIndex="2" GridPane.rowIndex="7">
-                                    <font>
-                                        <Font size="18.0" />
-                                    </font>
-                                </Button>
-                                <Button fx:id="button59" disable="true" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0" GridPane.columnIndex="3" GridPane.rowIndex="7">
-                                    <font>
-                                        <Font size="18.0" />
-                                    </font>
-                                </Button>
-                                <Button fx:id="button60" disable="true" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0" GridPane.columnIndex="4" GridPane.rowIndex="7">
-                                    <font>
-                                        <Font size="18.0" />
-                                    </font>
-                                </Button>
-                                <Button fx:id="button61" disable="true" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0" GridPane.columnIndex="5" GridPane.rowIndex="7">
-                                    <font>
-                                        <Font size="18.0" />
-                                    </font>
-                                </Button>
-                                <Button fx:id="button62" disable="true" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0" GridPane.columnIndex="6" GridPane.rowIndex="7">
-                                    <font>
-                                        <Font size="18.0" />
-                                    </font>
-                                </Button>
-                                <Button fx:id="button63" disable="true" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0" GridPane.columnIndex="7" GridPane.rowIndex="7">
-                                    <font>
-                                        <Font size="18.0" />
+                                        <Font size="18.0"/>
                                     </font>
                                 </Button>
 
-                                <Button fx:id="button64" disable="true" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" stylesheets="@../css/parity_button_style.css" text="0" GridPane.rowIndex="8">
+                                <Button fx:id="button32" disable="true" mnemonicParsing="false" prefHeight="50.0"
+                                        prefWidth="50.0" stylesheets="@../css/parity_button_style.css" text="0"
+                                        GridPane.rowIndex="4">
                                     <font>
-                                        <Font size="18.0" />
+                                        <Font size="18.0"/>
                                     </font>
                                 </Button>
-                                <Button fx:id="button65" disable="true" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0" GridPane.columnIndex="1" GridPane.rowIndex="8">
+                                <Button fx:id="button33" disable="true" mnemonicParsing="false" prefHeight="50.0"
+                                        prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0"
+                                        GridPane.columnIndex="1" GridPane.rowIndex="4">
                                     <font>
-                                        <Font size="18.0" />
+                                        <Font size="18.0"/>
                                     </font>
                                 </Button>
-                                <Button fx:id="button66" disable="true" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0" GridPane.columnIndex="2" GridPane.rowIndex="8">
+                                <Button fx:id="button34" disable="true" mnemonicParsing="false" prefHeight="50.0"
+                                        prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0"
+                                        GridPane.columnIndex="2" GridPane.rowIndex="4">
                                     <font>
-                                        <Font size="18.0" />
+                                        <Font size="18.0"/>
                                     </font>
                                 </Button>
-                                <Button fx:id="button67" disable="true" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0" GridPane.columnIndex="3" GridPane.rowIndex="8">
+                                <Button fx:id="button35" disable="true" mnemonicParsing="false" prefHeight="50.0"
+                                        prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0"
+                                        GridPane.columnIndex="3" GridPane.rowIndex="4">
                                     <font>
-                                        <Font size="18.0" />
+                                        <Font size="18.0"/>
                                     </font>
                                 </Button>
-                                <Button fx:id="button68" disable="true" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0" GridPane.columnIndex="4" GridPane.rowIndex="8">
+                                <Button fx:id="button36" disable="true" mnemonicParsing="false" prefHeight="50.0"
+                                        prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0"
+                                        GridPane.columnIndex="4" GridPane.rowIndex="4">
                                     <font>
-                                        <Font size="18.0" />
+                                        <Font size="18.0"/>
                                     </font>
                                 </Button>
-                                <Button fx:id="button69" disable="true" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0" GridPane.columnIndex="5" GridPane.rowIndex="8">
+                                <Button fx:id="button37" disable="true" mnemonicParsing="false" prefHeight="50.0"
+                                        prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0"
+                                        GridPane.columnIndex="5" GridPane.rowIndex="4">
                                     <font>
-                                        <Font size="18.0" />
+                                        <Font size="18.0"/>
                                     </font>
                                 </Button>
-                                <Button fx:id="button70" disable="true" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0" GridPane.columnIndex="6" GridPane.rowIndex="8">
+                                <Button fx:id="button38" disable="true" mnemonicParsing="false" prefHeight="50.0"
+                                        prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0"
+                                        GridPane.columnIndex="6" GridPane.rowIndex="4">
                                     <font>
-                                        <Font size="18.0" />
+                                        <Font size="18.0"/>
                                     </font>
                                 </Button>
-                                <Button fx:id="button71" disable="true" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0" GridPane.columnIndex="7" GridPane.rowIndex="8">
+                                <Button fx:id="button39" disable="true" mnemonicParsing="false" prefHeight="50.0"
+                                        prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0"
+                                        GridPane.columnIndex="7" GridPane.rowIndex="4">
                                     <font>
-                                        <Font size="18.0" />
+                                        <Font size="18.0"/>
+                                    </font>
+                                </Button>
+
+                                <Button fx:id="button40" disable="true" mnemonicParsing="false" prefHeight="50.0"
+                                        prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0"
+                                        GridPane.rowIndex="5">
+                                    <font>
+                                        <Font size="18.0"/>
+                                    </font>
+                                </Button>
+                                <Button fx:id="button41" disable="true" mnemonicParsing="false" prefHeight="50.0"
+                                        prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0"
+                                        GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                    <font>
+                                        <Font size="18.0"/>
+                                    </font>
+                                </Button>
+                                <Button fx:id="button42" disable="true" mnemonicParsing="false" prefHeight="50.0"
+                                        prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0"
+                                        GridPane.columnIndex="2" GridPane.rowIndex="5">
+                                    <font>
+                                        <Font size="18.0"/>
+                                    </font>
+                                </Button>
+                                <Button fx:id="button43" disable="true" mnemonicParsing="false" prefHeight="50.0"
+                                        prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0"
+                                        GridPane.columnIndex="3" GridPane.rowIndex="5">
+                                    <font>
+                                        <Font size="18.0"/>
+                                    </font>
+                                </Button>
+                                <Button fx:id="button44" disable="true" mnemonicParsing="false" prefHeight="50.0"
+                                        prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0"
+                                        GridPane.columnIndex="4" GridPane.rowIndex="5">
+                                    <font>
+                                        <Font size="18.0"/>
+                                    </font>
+                                </Button>
+                                <Button fx:id="button45" disable="true" mnemonicParsing="false" prefHeight="50.0"
+                                        prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0"
+                                        GridPane.columnIndex="5" GridPane.rowIndex="5">
+                                    <font>
+                                        <Font size="18.0"/>
+                                    </font>
+                                </Button>
+                                <Button fx:id="button46" disable="true" mnemonicParsing="false" prefHeight="50.0"
+                                        prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0"
+                                        GridPane.columnIndex="6" GridPane.rowIndex="5">
+                                    <font>
+                                        <Font size="18.0"/>
+                                    </font>
+                                </Button>
+                                <Button fx:id="button47" disable="true" mnemonicParsing="false" prefHeight="50.0"
+                                        prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0"
+                                        GridPane.columnIndex="7" GridPane.rowIndex="5">
+                                    <font>
+                                        <Font size="18.0"/>
+                                    </font>
+                                </Button>
+
+                                <Button fx:id="button48" disable="true" mnemonicParsing="false" prefHeight="50.0"
+                                        prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0"
+                                        GridPane.rowIndex="6">
+                                    <font>
+                                        <Font size="18.0"/>
+                                    </font>
+                                </Button>
+                                <Button fx:id="button49" disable="true" mnemonicParsing="false" prefHeight="50.0"
+                                        prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0"
+                                        GridPane.columnIndex="1" GridPane.rowIndex="6">
+                                    <font>
+                                        <Font size="18.0"/>
+                                    </font>
+                                </Button>
+                                <Button fx:id="button50" disable="true" mnemonicParsing="false" prefHeight="50.0"
+                                        prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0"
+                                        GridPane.columnIndex="2" GridPane.rowIndex="6">
+                                    <font>
+                                        <Font size="18.0"/>
+                                    </font>
+                                </Button>
+                                <Button fx:id="button51" disable="true" mnemonicParsing="false" prefHeight="50.0"
+                                        prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0"
+                                        GridPane.columnIndex="3" GridPane.rowIndex="6">
+                                    <font>
+                                        <Font size="18.0"/>
+                                    </font>
+                                </Button>
+                                <Button fx:id="button52" disable="true" mnemonicParsing="false" prefHeight="50.0"
+                                        prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0"
+                                        GridPane.columnIndex="4" GridPane.rowIndex="6">
+                                    <font>
+                                        <Font size="18.0"/>
+                                    </font>
+                                </Button>
+                                <Button fx:id="button53" disable="true" mnemonicParsing="false" prefHeight="50.0"
+                                        prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0"
+                                        GridPane.columnIndex="5" GridPane.rowIndex="6">
+                                    <font>
+                                        <Font size="18.0"/>
+                                    </font>
+                                </Button>
+                                <Button fx:id="button54" disable="true" mnemonicParsing="false" prefHeight="50.0"
+                                        prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0"
+                                        GridPane.columnIndex="6" GridPane.rowIndex="6">
+                                    <font>
+                                        <Font size="18.0"/>
+                                    </font>
+                                </Button>
+                                <Button fx:id="button55" disable="true" mnemonicParsing="false" prefHeight="50.0"
+                                        prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0"
+                                        GridPane.columnIndex="7" GridPane.rowIndex="6">
+                                    <font>
+                                        <Font size="18.0"/>
+                                    </font>
+                                </Button>
+
+                                <Button fx:id="button56" disable="true" mnemonicParsing="false" prefHeight="50.0"
+                                        prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0"
+                                        GridPane.rowIndex="7">
+                                    <font>
+                                        <Font size="18.0"/>
+                                    </font>
+                                </Button>
+                                <Button fx:id="button57" disable="true" mnemonicParsing="false" prefHeight="50.0"
+                                        prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0"
+                                        GridPane.columnIndex="1" GridPane.rowIndex="7">
+                                    <font>
+                                        <Font size="18.0"/>
+                                    </font>
+                                </Button>
+                                <Button fx:id="button58" disable="true" mnemonicParsing="false" prefHeight="50.0"
+                                        prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0"
+                                        GridPane.columnIndex="2" GridPane.rowIndex="7">
+                                    <font>
+                                        <Font size="18.0"/>
+                                    </font>
+                                </Button>
+                                <Button fx:id="button59" disable="true" mnemonicParsing="false" prefHeight="50.0"
+                                        prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0"
+                                        GridPane.columnIndex="3" GridPane.rowIndex="7">
+                                    <font>
+                                        <Font size="18.0"/>
+                                    </font>
+                                </Button>
+                                <Button fx:id="button60" disable="true" mnemonicParsing="false" prefHeight="50.0"
+                                        prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0"
+                                        GridPane.columnIndex="4" GridPane.rowIndex="7">
+                                    <font>
+                                        <Font size="18.0"/>
+                                    </font>
+                                </Button>
+                                <Button fx:id="button61" disable="true" mnemonicParsing="false" prefHeight="50.0"
+                                        prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0"
+                                        GridPane.columnIndex="5" GridPane.rowIndex="7">
+                                    <font>
+                                        <Font size="18.0"/>
+                                    </font>
+                                </Button>
+                                <Button fx:id="button62" disable="true" mnemonicParsing="false" prefHeight="50.0"
+                                        prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0"
+                                        GridPane.columnIndex="6" GridPane.rowIndex="7">
+                                    <font>
+                                        <Font size="18.0"/>
+                                    </font>
+                                </Button>
+                                <Button fx:id="button63" disable="true" mnemonicParsing="false" prefHeight="50.0"
+                                        prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0"
+                                        GridPane.columnIndex="7" GridPane.rowIndex="7">
+                                    <font>
+                                        <Font size="18.0"/>
+                                    </font>
+                                </Button>
+
+                                <Button fx:id="button64" disable="true" mnemonicParsing="false" prefHeight="50.0"
+                                        prefWidth="50.0" stylesheets="@../css/parity_button_style.css" text="0"
+                                        GridPane.rowIndex="8">
+                                    <font>
+                                        <Font size="18.0"/>
+                                    </font>
+                                </Button>
+                                <Button fx:id="button65" disable="true" mnemonicParsing="false" prefHeight="50.0"
+                                        prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0"
+                                        GridPane.columnIndex="1" GridPane.rowIndex="8">
+                                    <font>
+                                        <Font size="18.0"/>
+                                    </font>
+                                </Button>
+                                <Button fx:id="button66" disable="true" mnemonicParsing="false" prefHeight="50.0"
+                                        prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0"
+                                        GridPane.columnIndex="2" GridPane.rowIndex="8">
+                                    <font>
+                                        <Font size="18.0"/>
+                                    </font>
+                                </Button>
+                                <Button fx:id="button67" disable="true" mnemonicParsing="false" prefHeight="50.0"
+                                        prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0"
+                                        GridPane.columnIndex="3" GridPane.rowIndex="8">
+                                    <font>
+                                        <Font size="18.0"/>
+                                    </font>
+                                </Button>
+                                <Button fx:id="button68" disable="true" mnemonicParsing="false" prefHeight="50.0"
+                                        prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0"
+                                        GridPane.columnIndex="4" GridPane.rowIndex="8">
+                                    <font>
+                                        <Font size="18.0"/>
+                                    </font>
+                                </Button>
+                                <Button fx:id="button69" disable="true" mnemonicParsing="false" prefHeight="50.0"
+                                        prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0"
+                                        GridPane.columnIndex="5" GridPane.rowIndex="8">
+                                    <font>
+                                        <Font size="18.0"/>
+                                    </font>
+                                </Button>
+                                <Button fx:id="button70" disable="true" mnemonicParsing="false" prefHeight="50.0"
+                                        prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0"
+                                        GridPane.columnIndex="6" GridPane.rowIndex="8">
+                                    <font>
+                                        <Font size="18.0"/>
+                                    </font>
+                                </Button>
+                                <Button fx:id="button71" disable="true" mnemonicParsing="false" prefHeight="50.0"
+                                        prefWidth="50.0" stylesheets="@../css/normal_button_style.css" text="0"
+                                        GridPane.columnIndex="7" GridPane.rowIndex="8">
+                                    <font>
+                                        <Font size="18.0"/>
                                     </font>
                                 </Button>
                             </children>
@@ -505,54 +652,91 @@
                 </VBox>
             </children>
         </HBox>
-        <Label fx:id="labelMessage" layoutX="586.0" layoutY="36.0" prefHeight="50.0" prefWidth="450.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0">
+        <Label fx:id="labelMessage" layoutX="586.0" layoutY="36.0" prefHeight="50.0" prefWidth="400.0"
+               AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="20.0">
             <padding>
-                <Insets left="10.0" right="10.0" />
+                <Insets left="10.0" right="10.0"/>
             </padding>
-         <font>
-            <Font size="24.0" />
-         </font>
+            <font>
+                <Font size="24.0"/>
+            </font>
         </Label>
-        <VBox alignment="CENTER" layoutX="240.0" layoutY="218.0" spacing="20.0">
+        <VBox alignment="CENTER" layoutX="273.0" layoutY="219.0" spacing="20.0" AnchorPane.bottomAnchor="30.0">
             <children>
-                <Button mnemonicParsing="false" onAction="#cleanUpGridView" prefHeight="50.0" stylesheets="@../css/category_button.css" text="Wyczyść pamięć ECC" textFill="WHITE">
+                <Button mnemonicParsing="false" onAction="#cleanUpGridView" prefHeight="50.0" prefWidth="180.0"
+                        stylesheets="@../css/category_button.css" text="Clean up ECC memory" textFill="WHITE">
                     <font>
-                        <Font size="14.0" />
+                        <Font size="14.0"/>
                     </font>
+                    <graphic>
+                        <Icon content="CLEAR_ALL"/>
+                    </graphic>
                 </Button>
-                <Button mnemonicParsing="false" onAction="#breakBit" prefHeight="50.0" prefWidth="123.0" stylesheets="@../css/category_button.css" text="Przekłam bit" textFill="WHITE">
+                <Button mnemonicParsing="false" onAction="#breakBit" prefHeight="50.0" prefWidth="180.0"
+                        stylesheets="@../css/category_button.css" text="Change one bit" textFill="WHITE">
                     <font>
-                        <Font size="14.0" />
+                        <Font size="14.0"/>
                     </font>
+                    <graphic>
+                        <Icon content="SWAP_VERTICAL_CIRCLE"/>
+                    </graphic>
                 </Button>
-                <Button mnemonicParsing="false" onAction="#checkCorrectness" prefHeight="50.0" prefWidth="170.0" stylesheets="@../css/category_button.css" text="Sprawdź poprawność" textFill="WHITE">
+                <Button mnemonicParsing="false" onAction="#checkCorrectness" prefHeight="50.0" prefWidth="180.0"
+                        stylesheets="@../css/category_button.css" text="Check correctness" textFill="WHITE">
                     <font>
-                        <Font size="14.0" />
+                        <Font size="14.0"/>
                     </font>
+                    <graphic>
+                        <Icon content="CHECK"/>
+                    </graphic>
                 </Button>
-                <Button mnemonicParsing="false" onAction="#correctBit" prefHeight="50.0" prefWidth="122.0" stylesheets="@../css/category_button.css" text="Napraw" textFill="WHITE">
+                <Button mnemonicParsing="false" onAction="#correctBit" prefHeight="50.0" prefWidth="180.0"
+                        stylesheets="@../css/category_button.css" text="Correct message" textFill="WHITE">
                     <font>
-                        <Font size="14.0" />
+                        <Font size="14.0"/>
                     </font>
+                    <graphic>
+                        <Icon content="MY_LOCATION"/>
+                    </graphic>
+                </Button>
+                <Button disable="true" mnemonicParsing="false" onAction="#fetchNextWord" prefHeight="50.0"
+                        prefWidth="180.0" stylesheets="@../css/category_button.css" text="Fetch next word"
+                        textFill="WHITE">
+                    <font>
+                        <Font size="14.0"/>
+                    </font>
+                    <graphic>
+                        <Icon content="FILE_DOWNLOAD"/>
+                    </graphic>
                 </Button>
             </children>
         </VBox>
-      <VBox layoutX="59.0" layoutY="145.0" spacing="20.0" style="-fx-background-color: #222222;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <children>
-                <Button mnemonicParsing="false" onAction="#loadFromFile" prefHeight="50.0" prefWidth="123.0" stylesheets="@../css/category_button.css" text="Wczytaj z pliku" textFill="WHITE">
+        <VBox layoutX="59.0" layoutY="145.0" spacing="20.0" style="-fx-background-color: #222222;"
+              AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <TextField fx:id="textFieldFileName" prefWidth="160.0" promptText="file_name.txt"/>
+                <Button mnemonicParsing="false" onAction="#loadFromFile" prefHeight="50.0" prefWidth="160.0"
+                        stylesheets="@../css/category_button.css" text="Load from file" textFill="WHITE">
                     <font>
-                        <Font size="14.0" />
+                        <Font size="14.0"/>
                     </font>
+                    <graphic>
+                        <Icon content="FILE_UPLOAD"/>
+                    </graphic>
                 </Button>
-                <Button mnemonicParsing="false" onAction="#generateRandomWord" prefHeight="50.0" prefWidth="123.0" stylesheets="@../css/category_button.css" text="Generuj losowo" textFill="WHITE">
+                <Button mnemonicParsing="false" onAction="#generateRandomWord" prefHeight="50.0" prefWidth="160.0"
+                        stylesheets="@../css/category_button.css" text="Generate randomly" textFill="WHITE">
                     <font>
-                        <Font size="14.0" />
+                        <Font size="14.0"/>
                     </font>
+                    <graphic>
+                        <Icon content="SEND"/>
+                    </graphic>
                 </Button>
-         </children>
-         <padding>
-            <Insets left="40.0" right="40.0" top="50.0" />
-         </padding>
-      </VBox>
+            </children>
+            <padding>
+                <Insets left="40.0" right="40.0" top="50.0"/>
+            </padding>
+        </VBox>
     </children>
 </AnchorPane>
