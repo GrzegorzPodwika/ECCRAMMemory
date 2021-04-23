@@ -15,6 +15,7 @@ public class Main extends Application {
 
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);
+        primaryStage.setTitle("ECC RAM");
         primaryStage.setResizable(false);
         primaryStage.setOnHidden(e -> controller.shutdown());
         primaryStage.show();
