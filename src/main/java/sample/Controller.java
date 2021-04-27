@@ -123,6 +123,13 @@ public class Controller {
         buttons.add(button60); buttons.add(button61); buttons.add(button62); buttons.add(button63); buttons.add(button64); buttons.add(button65);
         buttons.add(button66); buttons.add(button67); buttons.add(button68); buttons.add(button69); buttons.add(button70); buttons.add(button71);
 
+        for (int i = 0; i < buttons.size(); i++) {
+            int finalI = i;
+            buttons.get(i).setOnAction(event -> {
+                changeBitToOppositeValue(finalI, RED_COLOR);
+            });
+        }
+
         try {
             reportFile = new FileWriter("report.txt");
         } catch (IOException e) {
@@ -244,6 +251,8 @@ public class Controller {
         searchButton.setText(String.valueOf(currentWord[index]));
 
         searchButton.setTextFill(textColor);
+        searchButton.getStylesheets().clear();
+        searchButton.getStylesheets().add(getClass().getResource("/css/error_button_style.css").toExternalForm());
 
         writeToReport(Arrays.toString(currentWord));
     }
@@ -283,14 +292,28 @@ public class Controller {
 
     @FXML
     public void cleanUpGridView() {
-        for (Button button : buttons) {
+        for (int i = 0; i < buttons.size(); i++) {
+            Button button = buttons.get(i);
             button.setText("0");
             button.setTextFill(BLACK_COLOR);
+
+            button.getStylesheets().clear();
+            if (i == 0) {
+                button.getStylesheets().add(getClass().getResource("/css/general_parity_button_style.css").toExternalForm());
+            } else if(i == 1 || i == 2 || i == 4 ||i == 8 ||i == 16 || i == 32 || i == 64) {
+                button.getStylesheets().add(getClass().getResource("/css/parity_button_style.css").toExternalForm());
+
+            }
         }
 
         clearLabelMessage();
         clearCurrentWord();
     }
+
+/*    @FXML
+    public void changeBit(int index) {
+
+    }*/
 
     private void clearLabelMessage() {
         labelMessage.setText("");
