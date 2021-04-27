@@ -250,9 +250,15 @@ public class Controller {
         Button searchButton = buttons.get(index);
         searchButton.setText(String.valueOf(currentWord[index]));
 
-        searchButton.setTextFill(textColor);
         searchButton.getStylesheets().clear();
-        searchButton.getStylesheets().add(getClass().getResource("/css/error_button_style.css").toExternalForm());
+
+        if (searchButton.getTextFill().equals(textColor)) {
+            searchButton.setTextFill(BLACK_COLOR);
+            searchButton.setStyle("-fx-focus-color: transparent;");
+        } else {
+            searchButton.setTextFill(textColor);
+            searchButton.getStylesheets().add(getClass().getResource("/css/error_button_style.css").toExternalForm());
+        }
 
         writeToReport(Arrays.toString(currentWord));
     }
